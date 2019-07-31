@@ -1,4 +1,5 @@
 @import '../core/colors.scss';
+@import '../core/fonts.scss';
 @import '../core/utils.scss';
 @import '../core/viewports.scss';
 
@@ -17,15 +18,20 @@ $panel-padding: 20px;
 }
 
 .panel__header {
+  @extend %font-huge;
+
   position: relative;
   height: 58px;
 }
 
 .panel-header__action {
+  // TODO: add font
   color: $blue-1;
 }
 
 .panel-header__badge {
+  @extend %font-extra-small;
+
   background-color: $red;
   color: $white;
   height: 25px;
@@ -37,6 +43,8 @@ $panel-padding: 20px;
 }
 
 .card {
+  @extend %font-small;
+
   border: 1px solid $grey-4;
   display: flex;
   flex-direction: column;
@@ -59,6 +67,8 @@ $panel-padding: 20px;
   }
 
   h2 {
+    @extend %font-large;
+
     color: $blue-2;
     margin: 0;
     flex: 0;
@@ -66,6 +76,8 @@ $panel-padding: 20px;
 }
 
 .card-static-content__action {
+  @extend %font-small-bold;
+
   color: $blue-1;
   flex: 0;
 }

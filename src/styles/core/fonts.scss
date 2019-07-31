@@ -1,0 +1,123 @@
+// font families
+$font-family: 'Roboto';
+$font-family-slab: 'Roboto Slab';
+
+// font sizes
+$font-size-extra-small: 12px;
+$font-size-small: 14px;
+$font-size-normal: 15px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+$font-size-extra-large: 24px;
+
+// line heights
+$line-height-extra-small: 14px;
+$line-height-small: 16px;
+$line-height-normal: 19px;
+$line-height-medium: 20px;
+$line-height-large: 24px;
+$line-height-extra-large: 25px;
+$line-height-huge: 30px;
+$line-height-extra-huge: 38px;
+
+// font weights
+$font-weight-regular: 500;
+$font-weight-bold: 700;
+
+%use-font-regular {
+  font-family: $font-family;
+}
+
+%use-font-slab {
+  font-family: $font-family-slab;
+}
+
+// typography
+%font-huge {
+  font-family: $font-family-slab;
+
+  font-size: $font-size-extra-large;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-extra-huge;
+}
+
+%font-extra-large-bold {
+  font-family: $font-family-slab;
+
+  font-size: $font-size-extra-large;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-huge;
+}
+
+%font-extra-large {
+  font-family: $font-family-slab;
+
+  font-size: $font-size-extra-large;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-huge;
+}
+
+%font-large {
+  font-family: $font-family-slab;
+
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-large;
+}
+
+%font-medium-bold {
+  font-family: $font-family;
+
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+}
+
+%font-medium-slab {
+  font-family: $font-family-slab;
+
+  font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-extra-small;
+}
+
+%font-medium {
+  font-family: $font-family;
+
+  font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-small;
+}
+
+%font-normal {
+  font-family: $font-family;
+
+  font-size: $font-size-normal;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-extra-large;
+}
+
+%font-small-bold {
+  font-family: $font-family;
+
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-normal;
+}
+
+%font-small {
+  font-family: $font-family;
+
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-medium;
+}
+
+%font-extra-small {
+  font-family: $font-family;
+
+  font-size: $font-size-extra-small;
+  font-weight: $font-weight-regular;
+  letter-spacing: 1.52px;
+  line-height: $line-height-extra-small;
+}

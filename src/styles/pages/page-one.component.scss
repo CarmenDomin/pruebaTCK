@@ -1,4 +1,5 @@
 @import '../core/colors.scss';
+@import '../core/fonts.scss';
 @import '../core/viewports.scss';
 
 $tile-margin: 7px;
@@ -12,10 +13,16 @@ $tile-padding: 17px;
 }
 
 .header {
+  @extend %font-extra-large;
+
   color: $blue-2;
   display: block;
   padding-top: 38px;
   text-align: center;
+}
+
+.header--bold {
+  @extend %font-extra-large-bold;
 }
 
 .header__stars {
@@ -38,6 +45,8 @@ $tile-padding: 17px;
 }
 
 .tile__header {
+  @extend %font-medium-bold;
+
   color: $blue-3;
   height: 38px;
   margin: 0 auto;
@@ -60,6 +69,8 @@ $tile-padding: 17px;
 }
 
 .tile__list {
+  @extend %font-normal;
+
   list-style-type: none;
   padding: 0;
   margin-bottom: 42px;
@@ -77,6 +88,8 @@ $tile-padding: 17px;
 }
 
 .tile__selector {
+  @extend %font-medium;
+
   background-color: $grey-shadow;
   height: 46px;
   line-height: 46px;
@@ -132,8 +145,6 @@ $tile-padding: 17px;
 
 // mobile
 @include viewport-down('mobile') {
-
-
   .tile {
     display: inline-block;
   }
