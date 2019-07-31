@@ -32,6 +32,10 @@
   .navigation {
     padding-right: 0; } }
 
+/* line 1, src/styles/components/stars.component.scss */
+.star {
+  padding: 1px; }
+
 /* line 8, src/styles/pages/page-one.component.scss */
 .page {
   background-color: #f9f9f9;
@@ -243,7 +247,7 @@
       width: 100%;
       height: auto; } }
 
-/* line 8, src/styles/application.scss */
+/* line 9, src/styles/application.scss */
 body {
   background-color: #fafafa;
   margin: 0 40px; }
