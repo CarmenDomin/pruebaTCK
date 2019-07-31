@@ -1,0 +1,42 @@
+@import '../core/colors.scss';
+@import '../core/viewports.scss';
+
+$height: 45px;
+
+// desktop
+:host {
+  display: block;
+  margin: 0 40px;
+}
+
+.navigation {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  height: $height;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.navigation__tab {
+  align-items: center;
+  color: $blue-1;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  height: $height;
+  justify-content: center;
+  text-decoration: none;
+  width: 120px;
+
+  &.active {
+    color: $blue-2;
+    border-bottom-color: $blue-2;
+  }
+}
+
+// tablet
+@include viewport-down('tablet') {
+  .navigation {
+    padding-right: 0;
+  }
+}

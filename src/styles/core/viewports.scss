@@ -1,0 +1,29 @@
+// mediaQueries breakpoints
+$max-width-mobile: 360px;
+$max-width-tablet: 768px;
+$max-width-small-desktop: 1023px;
+
+// get breakpoints for the viewport indicated ('mobile', 'tablet' or 'small-desktop')
+@function get-breakpoint($viewport) {
+  @if $viewport == 'mobile' {
+    @return $max-width-mobile;
+  }
+  @else if $viewport == 'tablet' {
+    @return $max-width-tablet;
+  }
+  @else if $viewport == 'small-desktop' {
+    @return $max-width-small-desktop;
+  }
+  @else {
+    @return none;
+  }
+}
+
+// apply styles for the viewport indicated and down
+@mixin viewport-down($viewport) {
+  $breakpoint: get-breakpoint($viewport);
+
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

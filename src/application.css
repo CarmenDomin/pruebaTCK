@@ -1,0 +1,38 @@
+/* line 7, src/styles/components/navigator.component.scss */
+:host {
+  display: block;
+  margin: 0 40px; }
+
+/* line 12, src/styles/components/navigator.component.scss */
+.navigation {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  height: 45px;
+  justify-content: flex-end;
+  padding-right: 30px; }
+
+/* line 21, src/styles/components/navigator.component.scss */
+.navigation__tab {
+  align-items: center;
+  color: #4ba7ee;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  text-decoration: none;
+  width: 120px; }
+  /* line 31, src/styles/components/navigator.component.scss */
+  .navigation__tab.active {
+    color: #003970;
+    border-bottom-color: #003970; }
+
+@media only screen and (max-width: 768px) {
+  /* line 39, src/styles/components/navigator.component.scss */
+  .navigation {
+    padding-right: 0; } }
+
+/* line 6, src/styles/application.scss */
+body {
+  background-color: #fafafa;
+  margin: 0 40px; }
