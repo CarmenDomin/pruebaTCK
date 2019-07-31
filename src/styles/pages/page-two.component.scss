@@ -3,47 +3,39 @@
 @import '../core/utils';
 @import '../core/viewports';
 
-$panel-padding: 20px;
-
 // desktop
 .panel {
+  @extend %font-extra-small;
+
   background-color: $white;
   border: 1px solid $grey-4;
+  color: $blue-5;
   margin-top: 41px;
-  padding: $panel-padding;
+  padding: 20px;
+  position: relative;
 
   &:not(:last-child) {
     margin-bottom: -17px;
   }
 }
 
-.panel__header {
-  position: relative;
-  height: 58px;
-}
-
-.panel-header__action {
+.panel__action {
   @extend %font-huge;
 
   color: $blue-1;
 }
 
-.panel-header__subtext {
-  @extend %font-extra-small;
-
-  color: $blue-5;
-}
-
-.panel-header__badge {
+.panel__badge {
   @extend %font-extra-small-spacing;
 
   background-color: $red;
   color: $white;
   height: 25px;
+  line-height: 25px;
   position: absolute;
-  right: -$panel-padding;
+  right: 0;
   text-align: center;
-  top: -$panel-padding;
+  top: 0;
   width: 221px;
 }
 
@@ -51,6 +43,7 @@ $panel-padding: 20px;
   @extend %font-small;
 
   border: 1px solid $grey-4;
+  color: $grey-5;
   display: flex;
   flex-direction: column;
   margin-top: 22px;
@@ -62,13 +55,13 @@ $panel-padding: 20px;
 }
 
 .card-static__content {
-  color: $grey-5;
   display: flex;
   flex-direction: column;
-  margin: 18px 0 18px 27px;
+  padding: 18px 0 18px 27px;
 
   > * {
     flex: 1;
+    margin-bottom: 23px;
   }
 
   h2 {
@@ -85,6 +78,7 @@ $panel-padding: 20px;
 
   color: $blue-1;
   flex: 0;
+  margin: 0;
 }
 
 .card__collapsible {
@@ -95,7 +89,9 @@ $panel-padding: 20px;
   @extend %clearFix;
 
   li {
+    box-sizing: border-box;
     float:left;
+    padding-right: 23px;
     width: 33.33%;
   }
 }
@@ -104,14 +100,70 @@ $panel-padding: 20px;
   color: $blue-2;
 }
 
-// mobile
+// small-desktop
+@include viewport-down(small-desktop) {
+  .card-collapsible__list li {
+    width: 50%;
+  }
+}
+
+// tablet
 @include viewport-down(tablet) {
+  .card {
+    padding-right: 0;
+  }
+
   .card__static {
     display: block;
+    position: relative;
+    padding-bottom: 45px;
 
     img {
       width: 100%;
       height: auto;
+    }
+  }
+
+  .card-static__content {
+    background-color: $white-shadow;
+    bottom: 0;
+    padding: 18px 27px;
+    position: absolute;
+  }
+
+  .card__collapsible {
+    padding: 0 27px 18px;
+  }
+}
+
+// mobile
+@include viewport-down(mobile) {
+  .panel {
+    padding-top: 40px;
+  }
+  
+  .panel__badge {
+    width: 100%;
+  }
+
+  .card {
+    padding-right: 0;
+  }
+
+  .card__static {
+    padding: 0;
+  }
+
+  .card-static__content {
+    padding: 18px;
+    position: relative;
+  }
+
+  .card__collapsible {
+    padding: 0 18px 18px;
+    
+    li {
+      width: 100%;
     }
   }
 }
