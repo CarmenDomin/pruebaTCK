@@ -1,18 +1,14 @@
 <div class='page'>
   <div class='header'>HOTEL <span class='header--bold'>Mieres del Camín Apartamentos</span><stars class='header__stars' [number]=4></stars></div>
 
-  <div class='tile_wrapper'>
-    <div *ngFor='let pension of pensions' class='tile'>
+  <radio-group class='tile_wrapper'>
+    <radio-button *ngFor='let pension of pensions; let i = index' [id]='i' class='tile'>
       <div class='tile__content'>
         <div class='tile__header'>{{pension.name}}</div>
         <ul class='tile__list'>
           <li *ngFor='let characteristic of pension.characteristics'>{{characteristic}}</li>
         </ul>
       </div>
-      <div class='tile__selector'>
-        <div class='tile__radiobutton'>O</div>
-        <span>Elegir régimen</span>
-      </div>
-    </div>
-  </div>
+    </radio-button>
+  </radio-group>
 </div>

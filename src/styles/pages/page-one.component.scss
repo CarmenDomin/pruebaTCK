@@ -1,5 +1,6 @@
 @import '../core/colors';
 @import '../core/fonts';
+@import '../core/utils';
 @import '../core/viewports';
 
 $tile-margin: 7px;
@@ -30,13 +31,17 @@ $tile-padding: 17px;
 }
 
 .tile {
-  align-items: center;
+  @include transition(('border-color'));
+
   border: 1px solid $blue-0;
   flex: 1;
   margin: 0 $tile-margin;
-  display: flex;
-  flex-direction: column;
+  outline: none;
   padding: $tile-padding;
+
+  &[aria-checked="true"] {
+    border-color: $blue-2;
+  }
 }
 
 .tile__content {
@@ -106,7 +111,7 @@ $tile-padding: 17px;
   padding: 29px 14px;
 }
 
-// tablet
+// small-desktop
 @include viewport-down(small-desktop) {
   .tile {
     margin: $tile-margin;
@@ -145,8 +150,6 @@ $tile-padding: 17px;
 
 // mobile
 @include viewport-down(mobile) {
-
-
   .tile {
     display: inline-block;
   }

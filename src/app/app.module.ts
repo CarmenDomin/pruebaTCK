@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 
 import {NavigatorComponent} from './components/navigator/navigator.component';
 import {StarsComponent} from './components/stars/stars.component';
+import {RadioButtonComponent, RadioGroupComponent} from './components/radio-buttons/index';
 import {PageOneComponent} from './pages/page-one/page-one.component';
 import {PageTwoComponent} from './pages/page-two/page-two.component';
 import {AppComponent} from './app.component';
@@ -14,6 +15,8 @@ import {AppComponent} from './app.component';
     NavigatorComponent,
     PageOneComponent,
     PageTwoComponent,
+    RadioButtonComponent,
+    RadioGroupComponent,
     StarsComponent,
   ],
   imports: [
