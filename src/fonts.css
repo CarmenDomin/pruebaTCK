@@ -1,0 +1,27 @@
+/*
+ * TODO: check
+ * Fonts are resolved at build time, relative to the root source folder of the application that's being built.
+ * To install the sources in a css file allow us to use relative paths.
+ */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/src/assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/src/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('/src/assets/fonts/Roboto_Slab/RobotoSlab-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('/src/assets/fonts/Roboto_Slab/RobotoSlab-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
