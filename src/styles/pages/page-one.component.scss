@@ -1,0 +1,144 @@
+@import '../core/colors.scss';
+@import '../core/viewports.scss';
+
+$tile-margin: 7px;
+$tile-padding: 17px;
+
+// desktop
+.page {
+  background-color: $grey-1;
+  box-shadow: 0 1px 2px $blue-shadow;
+  display: block;
+}
+
+.header {
+  color: $blue-2;
+  display: block;
+  padding-top: 38px;
+  text-align: center;
+}
+
+.header__stars {
+  padding-left: 40px;
+}
+
+.tile {
+  align-items: center;
+  border: 1px solid $blue-0;
+  flex: 1;
+  margin: 0 $tile-margin;
+  display: flex;
+  flex-direction: column;
+  padding: $tile-padding;
+}
+
+.tile__content {
+  flex-grow: 1;
+  max-width: 225px;
+}
+
+.tile__header {
+  color: $blue-3;
+  height: 38px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  position: relative;
+  text-align: center;
+  width: 70%;
+
+  &:after {
+    background-color: $blue-4; 
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,0);
+    width: 70px;
+  }
+}
+
+.tile__list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 42px;
+
+  li {
+    text-indent: -.7em;
+  }
+
+  li::before {
+    content: '. ';
+    color: $grey-2;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
+.tile__selector {
+  background-color: $grey-shadow;
+  height: 46px;
+  line-height: 46px;
+  width: 100%;
+
+  .tile__radiobutton {
+    display: inline-block;
+  }
+}
+
+.tile_wrapper {
+  //align-items: stretch;
+  display: flex;
+  padding: 29px 14px;
+}
+
+// tablet
+@include viewport-down('small-desktop') {
+  .tile {
+    margin: $tile-margin;
+    min-width: calc(100%/4);
+  }
+
+  .tile_wrapper {
+    flex-wrap: wrap;
+
+    &:after {
+      content: '';
+      flex: auto;
+      margin: $tile-margin + $tile-padding;
+    }
+  }
+}
+
+// tablet
+@include viewport-down('tablet') {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header__stars {
+    padding-left: 0;
+    padding-top: 15px;
+  }
+
+  .tile {
+    // IE and Edge do not support calc(100%/3) because they round to two decimals
+    // https://stackoverflow.com/questions/30480442/width-calc100-3-not-working-properly-in-any-ie
+    min-width: 33.33%;
+  }
+}
+
+// mobile
+@include viewport-down('mobile') {
+
+
+  .tile {
+    display: inline-block;
+  }
+
+  .tile_wrapper {
+    display: block;
+  }
+}

@@ -1,1 +1,18 @@
-page 1
+<div class='page'>
+  <div class='header'>HOTEL Mieres del Camín Apartamentos</div>
+
+  <div class='tile_wrapper'>
+    <div *ngFor='let pension of pensions' class='tile'>
+      <div class='tile__content'>
+        <div class='tile__header'>{{pension.name}}</div>
+        <ul class='tile__list'>
+          <li *ngFor='let characteristic of pension.characteristics'>{{characteristic}}</li>
+        </ul>
+      </div>
+      <div class='tile__selector'>
+        <div class='tile__radiobutton'>O</div>
+        <span>Elegir régimen</span>
+      </div>
+    </div>
+  </div>
+</div>
