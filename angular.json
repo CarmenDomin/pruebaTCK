@@ -19,7 +19,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [],
-            "styles": [],
+            "styles": [
+              "src/application.css"
+            ],
             "scripts": []
           },
           "configurations": {
