@@ -1,45 +1,23 @@
-<div class='panel'>
-  <span class='panel__action'>Mejora tu estancia</span>
+<div *ngFor='let panel of panels' class='panel'>
+  <span class='panel__action'>{{panel.title}}</span>
   <span>Opcional</span>
   <div class='panel__badge'>EXCLUSIVO HOTELES.COM</div>
 
-  <div class='card'>
+  <div *ngFor='let card of panel.cards' class='card'>
     <div class='card__static'>
-      <img src='../../../assets/img/img1.png' alt='card-1.1' height='180'>
+      <img src='../../../assets/img/{{card.imageName}}.png' alt='card-1.2' height='180'>
       <div class='card-static__content'>
-        <h2>Olvídese de la rutina</h2>
-        <span>Cras vehicula vestibulum dapibus. Pellentesque auctor dolor et purus facilisis maximus. Mauris eget urna luctus, imperdiet neque nec, aliquet lorem.</span>
+        <h2>{{card.title}}</h2>
+        <span>{{card.content}}</span>
         <div class='card-static-content__action'>Más información y condiciones</div>
       </div>
     </div>
-  </div>
-
-  <div class='card'>
-    <div class='card__static'>
-      <img src='../../../assets/img/img2.png' alt='card-1.2' height='180'>
-      <div class='card-static__content'>
-        <h2>Experiencias y programas SPA con agua</h2>
-        <span>Las experiencias spa de agua tienen una presencia muy especial en SPA Sensations. No es extraño si consideramos que la mayor parte del planeta, así como del propio cuerpo humano, están compuestos de agua.<br/>El arte de recrear experiencias de agua en variaciones ilimitadas es la base de la propuesta de SPA Sensations a sus clientes, aportando el refinamiento al baño y a la hidratación en todas sus formas. Un mundo mágico de posibilidades, más allá de la terapia y del que ahora usted, también podrá disfrutar.</span>
-        <div class='card-static-content__action'>Más información y condiciones</div>
-      </div>
-    </div>
-    <div class='card__collapsible'>
-      <div>Incluye</div>
+    <div *ngIf='card.moreInformation' class='card__collapsible'>
+      <div>{{card.moreInformation.text}}</div>
       <ul class='card-collapsible__list'>
-        <li>Baño javanés Mandi Susu tradicional: evocación de los baños que tomaban las princesas de las cortes y palacios de Java Central, en Indonesia, con antiguas recetas en las que se mezclaba la leche y las especias.</li>
-        <li>Baño floral balinés: con aceite de almendra dulce y aromas de jazmín.</li>
-        <li>Baño de vapor herbal: baño de vapor con hierbas del sudeste asiático.</li>
-        <li>Baño oceánico: con sal marina y gajos de mandarina o lima.</li>
-        <li>Baño de pies floral: baño aromático de pies, con pétalos y aromas.</li>
-        <li>Rain shower.</li>
+        <li *ngFor='let item of card.moreInformation.list'>{{item}}</li>
       </ul>
-      <div class='card-collapsible__disclaimer'>Valores no acumulables a otras promociones similares</div>
+      <div class='card-collapsible__disclaimer'>{{card.moreInformation.disclaimer}}</div>
     </div>
   </div>
-</div>
-
-<div class='panel'>
-  <span class='panel__action'>Servicios de habitación</span>
-  <span>Opcional</span>
-  <div class='panel__badge'>EXCLUSIVO HOTELES.COM</div>
 </div>
