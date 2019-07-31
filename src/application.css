@@ -1,5 +1,5 @@
 /* line 36, src/styles/core/fonts.scss */
-.panel-header__action {
+.panel__action {
   font-family: "Roboto Slab";
   font-size: 24px;
   font-weight: 700;
@@ -69,35 +69,29 @@
   line-height: 20px; }
 
 /* line 116, src/styles/core/fonts.scss */
-.panel-header__subtext {
+.panel {
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 500;
   line-height: 14px; }
 
 /* line 124, src/styles/core/fonts.scss */
-.panel-header__badge {
+.panel__badge {
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1.52px;
   line-height: 14px; }
 
-/* line 8, src/styles/components/navigator.component.scss */
-:host {
-  display: block;
-  margin: 0 40px; }
-
-/* line 13, src/styles/components/navigator.component.scss */
+/* line 6, src/styles/components/navigator.component.scss */
 .navigation {
   align-items: center;
   background-color: #fff;
   display: flex;
-  height: 45px;
   justify-content: flex-end;
   padding-right: 30px; }
 
-/* line 22, src/styles/components/navigator.component.scss */
+/* line 14, src/styles/components/navigator.component.scss */
 .navigation__tab {
   align-items: center;
   color: #4ba7ee;
@@ -107,18 +101,26 @@
   justify-content: center;
   text-decoration: none;
   width: 120px; }
-  /* line 34, src/styles/components/navigator.component.scss */
+  /* line 26, src/styles/components/navigator.component.scss */
   .navigation__tab.active {
     color: #003970;
     border-bottom-color: #003970; }
 
 @media only screen and (max-width: 768px) {
-  /* line 42, src/styles/components/navigator.component.scss */
+  /* line 34, src/styles/components/navigator.component.scss */
   .navigation {
     padding-right: 0; } }
 
+@media only screen and (max-width: 560px) {
+  /* line 41, src/styles/components/navigator.component.scss */
+  .navigation {
+    display: flex; }
+  /* line 45, src/styles/components/navigator.component.scss */
+  .navigation__tab {
+    flex: 1; } }
+
 /* line 36, src/styles/core/fonts.scss */
-.panel-header__action {
+.panel__action {
   font-family: "Roboto Slab";
   font-size: 24px;
   font-weight: 700;
@@ -188,14 +190,14 @@
   line-height: 20px; }
 
 /* line 116, src/styles/core/fonts.scss */
-.panel-header__subtext {
+.panel {
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 500;
   line-height: 14px; }
 
 /* line 124, src/styles/core/fonts.scss */
-.panel-header__badge {
+.panel__badge {
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 500;
@@ -286,7 +288,7 @@ radio-button {
   padding: 1px; }
 
 /* line 36, src/styles/core/fonts.scss */
-.panel-header__action {
+.panel__action {
   font-family: "Roboto Slab";
   font-size: 24px;
   font-weight: 700;
@@ -356,14 +358,14 @@ radio-button {
   line-height: 20px; }
 
 /* line 116, src/styles/core/fonts.scss */
-.panel-header__subtext {
+.panel {
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 500;
   line-height: 14px; }
 
 /* line 124, src/styles/core/fonts.scss */
-.panel-header__badge {
+.panel__badge {
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 500;
@@ -497,7 +499,7 @@ radio-button {
   */ }
 
 /* line 36, src/styles/core/fonts.scss */
-.panel-header__action {
+.panel__action {
   font-family: "Roboto Slab";
   font-size: 24px;
   font-weight: 700;
@@ -567,14 +569,14 @@ radio-button {
   line-height: 20px; }
 
 /* line 116, src/styles/core/fonts.scss */
-.panel-header__subtext {
+.panel {
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 500;
   line-height: 14px; }
 
 /* line 124, src/styles/core/fonts.scss */
-.panel-header__badge {
+.panel__badge {
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 500;
@@ -590,93 +592,134 @@ radio-button {
 .card-collapsible__list:after {
   clear: both; }
 
-/* line 9, src/styles/pages/page-two.component.scss */
+/* line 7, src/styles/pages/page-two.component.scss */
 .panel {
   background-color: #fff;
   border: 1px solid #dee1e8;
+  color: #105aa3;
   margin-top: 41px;
-  padding: 20px; }
-  /* line 15, src/styles/pages/page-two.component.scss */
+  padding: 20px;
+  position: relative; }
+  /* line 17, src/styles/pages/page-two.component.scss */
   .panel:not(:last-child) {
     margin-bottom: -17px; }
 
-/* line 20, src/styles/pages/page-two.component.scss */
-.panel__header {
-  position: relative;
-  height: 58px; }
-
-/* line 25, src/styles/pages/page-two.component.scss */
-.panel-header__action {
+/* line 22, src/styles/pages/page-two.component.scss */
+.panel__action {
   color: #4ba7ee; }
 
-/* line 31, src/styles/pages/page-two.component.scss */
-.panel-header__subtext {
-  color: #105aa3; }
-
-/* line 37, src/styles/pages/page-two.component.scss */
-.panel-header__badge {
+/* line 28, src/styles/pages/page-two.component.scss */
+.panel__badge {
   background-color: #e82e34;
   color: #fff;
   height: 25px;
+  line-height: 25px;
   position: absolute;
-  right: -20px;
+  right: 0;
   text-align: center;
-  top: -20px;
+  top: 0;
   width: 221px; }
 
-/* line 50, src/styles/pages/page-two.component.scss */
+/* line 42, src/styles/pages/page-two.component.scss */
 .card {
   border: 1px solid #dee1e8;
+  color: #616469;
   display: flex;
   flex-direction: column;
   margin-top: 22px;
   padding-right: 10%; }
 
-/* line 60, src/styles/pages/page-two.component.scss */
+/* line 53, src/styles/pages/page-two.component.scss */
 .card__static {
   display: flex; }
 
-/* line 64, src/styles/pages/page-two.component.scss */
+/* line 57, src/styles/pages/page-two.component.scss */
 .card-static__content {
-  color: #616469;
   display: flex;
   flex-direction: column;
-  margin: 18px 0 18px 27px; }
-  /* line 70, src/styles/pages/page-two.component.scss */
+  padding: 18px 0 18px 27px; }
+  /* line 62, src/styles/pages/page-two.component.scss */
   .card-static__content > * {
-    flex: 1; }
-  /* line 74, src/styles/pages/page-two.component.scss */
+    flex: 1;
+    margin-bottom: 23px; }
+  /* line 67, src/styles/pages/page-two.component.scss */
   .card-static__content h2 {
     color: #003970;
     margin: 0;
     flex: 0; }
 
-/* line 83, src/styles/pages/page-two.component.scss */
+/* line 76, src/styles/pages/page-two.component.scss */
 .card-static-content__action {
   color: #4ba7ee;
-  flex: 0; }
+  flex: 0;
+  margin: 0; }
 
-/* line 90, src/styles/pages/page-two.component.scss */
+/* line 84, src/styles/pages/page-two.component.scss */
 .card__collapsible {
   padding: 23px 0 17px 81px; }
 
-/* line 97, src/styles/pages/page-two.component.scss */
+/* line 91, src/styles/pages/page-two.component.scss */
 .card-collapsible__list li {
+  box-sizing: border-box;
   float: left;
+  padding-right: 23px;
   width: 33.33%; }
 
-/* line 103, src/styles/pages/page-two.component.scss */
+/* line 99, src/styles/pages/page-two.component.scss */
 .card-collapsible__disclaimer {
   color: #003970; }
 
+@media only screen and (max-width: 1023px) {
+  /* line 105, src/styles/pages/page-two.component.scss */
+  .card-collapsible__list li {
+    width: 50%; } }
+
 @media only screen and (max-width: 768px) {
-  /* line 109, src/styles/pages/page-two.component.scss */
+  /* line 112, src/styles/pages/page-two.component.scss */
+  .card {
+    padding-right: 0; }
+  /* line 116, src/styles/pages/page-two.component.scss */
   .card__static {
-    display: block; }
-    /* line 112, src/styles/pages/page-two.component.scss */
+    display: block;
+    position: relative;
+    padding-bottom: 45px; }
+    /* line 121, src/styles/pages/page-two.component.scss */
     .card__static img {
       width: 100%;
-      height: auto; } }
+      height: auto; }
+  /* line 127, src/styles/pages/page-two.component.scss */
+  .card-static__content {
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    padding: 18px 27px;
+    position: absolute; }
+  /* line 134, src/styles/pages/page-two.component.scss */
+  .card__collapsible {
+    padding: 0 27px 18px; } }
+
+@media only screen and (max-width: 560px) {
+  /* line 141, src/styles/pages/page-two.component.scss */
+  .panel {
+    padding-top: 40px; }
+  /* line 145, src/styles/pages/page-two.component.scss */
+  .panel__badge {
+    width: 100%; }
+  /* line 149, src/styles/pages/page-two.component.scss */
+  .card {
+    padding-right: 0; }
+  /* line 153, src/styles/pages/page-two.component.scss */
+  .card__static {
+    padding: 0; }
+  /* line 157, src/styles/pages/page-two.component.scss */
+  .card-static__content {
+    padding: 18px;
+    position: relative; }
+  /* line 162, src/styles/pages/page-two.component.scss */
+  .card__collapsible {
+    padding: 0 18px 18px; }
+    /* line 165, src/styles/pages/page-two.component.scss */
+    .card__collapsible li {
+      width: 100%; } }
 
 /* line 7, src/styles/application.scss */
 body {

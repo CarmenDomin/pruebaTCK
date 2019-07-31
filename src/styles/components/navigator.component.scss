@@ -2,19 +2,11 @@
 @import '../core/fonts';
 @import '../core/viewports';
 
-$height: 45px;
-
 // desktop
-:host {
-  display: block;
-  margin: 0 40px;
-}
-
 .navigation {
   align-items: center;
   background-color: $white;
   display: flex;
-  height: $height;
   justify-content: flex-end;
   padding-right: 30px;
 }
@@ -26,7 +18,7 @@ $height: 45px;
   color: $blue-1;
   border-bottom: 1px solid transparent;
   display: flex;
-  height: $height;
+  height: 45px;
   justify-content: center;
   text-decoration: none;
   width: 120px;
@@ -41,5 +33,16 @@ $height: 45px;
 @include viewport-down(tablet) {
   .navigation {
     padding-right: 0;
+  }
+}
+
+// mobile
+@include viewport-down(mobile) {
+  .navigation {
+    display: flex;
+  }
+
+  .navigation__tab {
+    flex: 1;
   }
 }
