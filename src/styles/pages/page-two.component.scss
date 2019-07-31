@@ -1,7 +1,7 @@
-@import '../core/colors.scss';
-@import '../core/fonts.scss';
-@import '../core/utils.scss';
-@import '../core/viewports.scss';
+@import '../core/colors';
+@import '../core/fonts';
+@import '../core/utils';
+@import '../core/viewports';
 
 $panel-padding: 20px;
 
@@ -18,19 +18,24 @@ $panel-padding: 20px;
 }
 
 .panel__header {
-  @extend %font-huge;
-
   position: relative;
   height: 58px;
 }
 
 .panel-header__action {
-  // TODO: add font
+  @extend %font-huge;
+
   color: $blue-1;
 }
 
-.panel-header__badge {
+.panel-header__subtext {
   @extend %font-extra-small;
+
+  color: $blue-5;
+}
+
+.panel-header__badge {
+  @extend %font-extra-small-spacing;
 
   background-color: $red;
   color: $white;
@@ -87,7 +92,7 @@ $panel-padding: 20px;
 }
 
 .card-collapsible__list {
-  @extend %clearfix;
+  @extend %clearFix;
 
   li {
     float:left;
@@ -100,7 +105,7 @@ $panel-padding: 20px;
 }
 
 // mobile
-@include viewport-down('tablet') {
+@include viewport-down(tablet) {
   .card__static {
     display: block;
 

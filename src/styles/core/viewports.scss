@@ -1,17 +1,23 @@
-// mediaQueries breakpoints
+// media queries breakpoints
 $max-width-mobile: 360px;
 $max-width-tablet: 768px;
 $max-width-small-desktop: 1023px;
 
-// get breakpoints for the viewport indicated ('mobile', 'tablet' or 'small-desktop')
+$viewports: (mobile, tablet, small-desktop);
+
+// get breakpoints for the viewport indicated (mobile, tablet or small-desktop)
 @function get-breakpoint($viewport) {
-  @if $viewport == 'mobile' {
+  @if index($viewports, $viewport) == null {
+    @error 'Unknown viewport: #{$viewport}';
+  }
+
+  @if $viewport == mobile {
     @return $max-width-mobile;
   }
-  @else if $viewport == 'tablet' {
+  @else if $viewport == tablet {
     @return $max-width-tablet;
   }
-  @else if $viewport == 'small-desktop' {
+  @else if $viewport == small-desktop {
     @return $max-width-small-desktop;
   }
   @else {

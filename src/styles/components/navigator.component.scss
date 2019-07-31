@@ -1,6 +1,6 @@
-@import '../core/colors.scss';
-@import '../core/fonts.scss';
-@import '../core/viewports.scss';
+@import '../core/colors';
+@import '../core/fonts';
+@import '../core/viewports';
 
 $height: 45px;
 
@@ -38,7 +38,7 @@ $height: 45px;
 }
 
 // tablet
-@include viewport-down('tablet') {
+@include viewport-down(tablet) {
   .navigation {
     padding-right: 0;
   }

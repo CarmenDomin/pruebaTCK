@@ -1,5 +1,5 @@
-// @extend %clearfix
-%clearfix {
+// @extend %clearFix
+%clearFix {
   &:before,
   &:after {
     content: ' ';

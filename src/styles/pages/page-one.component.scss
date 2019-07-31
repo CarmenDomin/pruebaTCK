@@ -1,6 +1,6 @@
-@import '../core/colors.scss';
-@import '../core/fonts.scss';
-@import '../core/viewports.scss';
+@import '../core/colors';
+@import '../core/fonts';
+@import '../core/viewports';
 
 $tile-margin: 7px;
 $tile-padding: 17px;
@@ -91,6 +91,7 @@ $tile-padding: 17px;
   @extend %font-medium;
 
   background-color: $grey-shadow;
+  color: $grey-5;
   height: 46px;
   line-height: 46px;
   width: 100%;
@@ -101,13 +102,12 @@ $tile-padding: 17px;
 }
 
 .tile_wrapper {
-  //align-items: stretch;
   display: flex;
   padding: 29px 14px;
 }
 
 // tablet
-@include viewport-down('small-desktop') {
+@include viewport-down(small-desktop) {
   .tile {
     margin: $tile-margin;
     min-width: calc(100%/4);
@@ -125,7 +125,7 @@ $tile-padding: 17px;
 }
 
 // tablet
-@include viewport-down('tablet') {
+@include viewport-down(tablet) {
   .header {
     display: flex;
     flex-direction: column;
@@ -144,7 +144,9 @@ $tile-padding: 17px;
 }
 
 // mobile
-@include viewport-down('mobile') {
+@include viewport-down(mobile) {
+
+
   .tile {
     display: inline-block;
   }
