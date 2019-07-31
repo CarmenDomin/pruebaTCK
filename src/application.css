@@ -212,26 +212,35 @@
   clear: both; }
 
 /* line 5, src/styles/components/radio-buttons.component.scss */
+radio-button {
+  outline: none; }
+
+/* line 9, src/styles/components/radio-buttons.component.scss */
 .radio-button {
+  transition: border-color .3s ease-out;
+  border: 1px solid #c9e3f9;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 100%; }
+  height: 100%;
+  padding: 17px; }
 
-/* line 11, src/styles/components/radio-buttons.component.scss */
+/* line 20, src/styles/components/radio-buttons.component.scss */
 .radio-button__content {
   flex: 1; }
 
-/* line 15, src/styles/components/radio-buttons.component.scss */
+/* line 24, src/styles/components/radio-buttons.component.scss */
 .radio-button__selector {
   transition: border-color .3s ease-out, color .3s ease-out;
+  align-items: center;
   background-color: rgba(222, 225, 232, 0.38);
   border: 1px solid transparent;
   color: #616469;
+  display: flex;
   height: 46px;
-  line-height: 46px !important;
   padding: 0 10px; }
 
-/* line 27, src/styles/components/radio-buttons.component.scss */
+/* line 37, src/styles/components/radio-buttons.component.scss */
 .radio-button__outer-circle {
   transition: border .3s ease-out;
   align-items: center;
@@ -245,7 +254,7 @@
   position: relative;
   width: 16px; }
 
-/* line 42, src/styles/components/radio-buttons.component.scss */
+/* line 52, src/styles/components/radio-buttons.component.scss */
 .radio-button__inner-circle {
   transition: background-color .3s ease-out;
   height: 10px;
@@ -256,15 +265,19 @@
   top: 50%;
   transform: translate(-50%, -50%); }
 
-/* line 55, src/styles/components/radio-buttons.component.scss */
+/* line 65, src/styles/components/radio-buttons.component.scss */
+[aria-checked="true"] .radio-button {
+  border-color: #003970; }
+
+/* line 69, src/styles/components/radio-buttons.component.scss */
 [aria-checked="true"] .radio-button__selector {
   border-color: #003970;
   color: #003970; }
 
-/* line 59, src/styles/components/radio-buttons.component.scss */
+/* line 73, src/styles/components/radio-buttons.component.scss */
 [aria-checked="true"] .radio-button__outer-circle {
   border-color: #6dc138; }
-  /* line 62, src/styles/components/radio-buttons.component.scss */
+  /* line 76, src/styles/components/radio-buttons.component.scss */
   [aria-checked="true"] .radio-button__outer-circle .radio-button__inner-circle {
     background-color: #6dc138; }
 
@@ -385,22 +398,15 @@
 
 /* line 33, src/styles/pages/page-one.component.scss */
 .tile {
-  transition: border-color .3s ease-out;
-  border: 1px solid #c9e3f9;
   flex: 1;
-  margin: 0 7px;
-  outline: none;
-  padding: 17px; }
-  /* line 42, src/styles/pages/page-one.component.scss */
-  .tile[aria-checked="true"] {
-    border-color: #003970; }
+  margin: 0 7px; }
 
-/* line 47, src/styles/pages/page-one.component.scss */
+/* line 38, src/styles/pages/page-one.component.scss */
 .tile__content {
   flex-grow: 1;
   max-width: 225px; }
 
-/* line 52, src/styles/pages/page-one.component.scss */
+/* line 43, src/styles/pages/page-one.component.scss */
 .tile__header {
   color: #105aa3;
   height: 38px;
@@ -409,7 +415,7 @@
   position: relative;
   text-align: center;
   width: 70%; }
-  /* line 63, src/styles/pages/page-one.component.scss */
+  /* line 54, src/styles/pages/page-one.component.scss */
   .tile__header:after {
     background-color: #c9e3f9;
     bottom: 0;
@@ -421,69 +427,69 @@
     transform: translate(-50%, 0);
     width: 70px; }
 
-/* line 76, src/styles/pages/page-one.component.scss */
+/* line 67, src/styles/pages/page-one.component.scss */
 .tile__list {
   list-style-type: none;
   padding: 0;
   margin-bottom: 42px; }
-  /* line 83, src/styles/pages/page-one.component.scss */
+  /* line 74, src/styles/pages/page-one.component.scss */
   .tile__list li {
     text-indent: -.7em; }
-  /* line 87, src/styles/pages/page-one.component.scss */
+  /* line 78, src/styles/pages/page-one.component.scss */
   .tile__list li::before {
     content: '. ';
     color: #9da2a9;
     font-size: 25px;
     font-weight: bold; }
 
-/* line 95, src/styles/pages/page-one.component.scss */
+/* line 86, src/styles/pages/page-one.component.scss */
 .tile__selector {
   background-color: rgba(222, 225, 232, 0.38);
   color: #616469;
   height: 46px;
   line-height: 46px;
   width: 100%; }
-  /* line 104, src/styles/pages/page-one.component.scss */
+  /* line 95, src/styles/pages/page-one.component.scss */
   .tile__selector .tile__radiobutton {
     display: inline-block; }
 
-/* line 109, src/styles/pages/page-one.component.scss */
+/* line 100, src/styles/pages/page-one.component.scss */
 .tile_wrapper {
   display: flex;
   padding: 29px 14px; }
 
 @media only screen and (max-width: 1023px) {
-  /* line 116, src/styles/pages/page-one.component.scss */
+  /* line 107, src/styles/pages/page-one.component.scss */
   .tile {
     margin: 7px;
     min-width: calc(100%/4); }
-  /* line 121, src/styles/pages/page-one.component.scss */
+  /* line 112, src/styles/pages/page-one.component.scss */
   .tile_wrapper {
     flex-wrap: wrap; }
-    /* line 124, src/styles/pages/page-one.component.scss */
+    /* line 115, src/styles/pages/page-one.component.scss */
     .tile_wrapper:after {
       content: '';
       flex: auto;
-      margin: 24px; } }
+      margin: 7px; } }
 
 @media only screen and (max-width: 768px) {
-  /* line 134, src/styles/pages/page-one.component.scss */
+  /* line 125, src/styles/pages/page-one.component.scss */
   .header {
     display: flex;
     flex-direction: column; }
-  /* line 139, src/styles/pages/page-one.component.scss */
+  /* line 130, src/styles/pages/page-one.component.scss */
   .header__stars {
     padding-left: 0;
     padding-top: 15px; }
-  /* line 144, src/styles/pages/page-one.component.scss */
+  /* line 135, src/styles/pages/page-one.component.scss */
   .tile {
     min-width: 33.33%; } }
 
 @media only screen and (max-width: 360px) {
-  /* line 153, src/styles/pages/page-one.component.scss */
+  /* line 144, src/styles/pages/page-one.component.scss */
   .tile {
     display: inline-block; }
-  /* line 157, src/styles/pages/page-one.component.scss */
+  /* line 148, src/styles/pages/page-one.component.scss */
   .tile_wrapper {
     display: block; } }
 

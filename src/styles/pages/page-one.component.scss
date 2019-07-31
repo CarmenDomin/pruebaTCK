@@ -31,17 +31,8 @@ $tile-padding: 17px;
 }
 
 .tile {
-  @include transition(('border-color'));
-
-  border: 1px solid $blue-0;
   flex: 1;
   margin: 0 $tile-margin;
-  outline: none;
-  padding: $tile-padding;
-
-  &[aria-checked="true"] {
-    border-color: $blue-2;
-  }
 }
 
 .tile__content {
@@ -124,7 +115,7 @@ $tile-padding: 17px;
     &:after {
       content: '';
       flex: auto;
-      margin: $tile-margin + $tile-padding;
+      margin: $tile-margin; //+ $tile-padding;
     }
   }
 }
