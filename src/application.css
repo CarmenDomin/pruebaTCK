@@ -249,17 +249,17 @@ radio-button {
   border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
-  height: 16px;
   margin-right: 15px;
-  position: relative;
-  width: 16px; }
+  min-height: 16px;
+  min-width: 16px;
+  position: relative; }
 
 /* line 52, src/styles/components/radio-buttons.component.scss */
 .radio-button__inner-circle {
   transition: background-color .3s ease-out;
-  height: 10px;
-  width: 10px;
   border-radius: 50%;
+  min-height: 10px;
+  min-width: 10px;
   left: 50%;
   position: absolute;
   top: 50%;
@@ -379,34 +379,29 @@ radio-button {
 .card-collapsible__list:after {
   clear: both; }
 
-/* line 10, src/styles/pages/page-one.component.scss */
+/* line 9, src/styles/pages/page-one.component.scss */
 .page {
   background-color: #f9f9f9;
   box-shadow: 0 1px 2px rgba(80, 92, 119, 0.2);
   display: block; }
 
-/* line 16, src/styles/pages/page-one.component.scss */
+/* line 15, src/styles/pages/page-one.component.scss */
 .header {
   color: #003970;
   display: block;
   padding-top: 38px;
   text-align: center; }
 
-/* line 29, src/styles/pages/page-one.component.scss */
+/* line 28, src/styles/pages/page-one.component.scss */
 .header__stars {
   padding-left: 40px; }
 
-/* line 33, src/styles/pages/page-one.component.scss */
+/* line 32, src/styles/pages/page-one.component.scss */
 .tile {
   flex: 1;
   margin: 0 7px; }
 
-/* line 38, src/styles/pages/page-one.component.scss */
-.tile__content {
-  flex-grow: 1;
-  max-width: 225px; }
-
-/* line 43, src/styles/pages/page-one.component.scss */
+/* line 37, src/styles/pages/page-one.component.scss */
 .tile__header {
   color: #105aa3;
   height: 38px;
@@ -415,7 +410,7 @@ radio-button {
   position: relative;
   text-align: center;
   width: 70%; }
-  /* line 54, src/styles/pages/page-one.component.scss */
+  /* line 48, src/styles/pages/page-one.component.scss */
   .tile__header:after {
     background-color: #c9e3f9;
     bottom: 0;
@@ -427,71 +422,79 @@ radio-button {
     transform: translate(-50%, 0);
     width: 70px; }
 
-/* line 67, src/styles/pages/page-one.component.scss */
+/* line 61, src/styles/pages/page-one.component.scss */
 .tile__list {
   list-style-type: none;
   padding: 0;
   margin-bottom: 42px; }
-  /* line 74, src/styles/pages/page-one.component.scss */
+  /* line 68, src/styles/pages/page-one.component.scss */
   .tile__list li {
     text-indent: -.7em; }
-  /* line 78, src/styles/pages/page-one.component.scss */
-  .tile__list li::before {
-    content: '. ';
-    color: #9da2a9;
-    font-size: 25px;
-    font-weight: bold; }
+    /* line 71, src/styles/pages/page-one.component.scss */
+    .tile__list li::before {
+      content: '. ';
+      color: #9da2a9;
+      font-size: 25px;
+      font-weight: bold; }
 
-/* line 86, src/styles/pages/page-one.component.scss */
+/* line 80, src/styles/pages/page-one.component.scss */
 .tile__selector {
   background-color: rgba(222, 225, 232, 0.38);
   color: #616469;
   height: 46px;
   line-height: 46px;
   width: 100%; }
-  /* line 95, src/styles/pages/page-one.component.scss */
+  /* line 89, src/styles/pages/page-one.component.scss */
   .tile__selector .tile__radiobutton {
     display: inline-block; }
 
-/* line 100, src/styles/pages/page-one.component.scss */
+/* line 94, src/styles/pages/page-one.component.scss */
 .tile_wrapper {
   display: flex;
   padding: 29px 14px; }
 
 @media only screen and (max-width: 1023px) {
-  /* line 107, src/styles/pages/page-one.component.scss */
+  /* line 101, src/styles/pages/page-one.component.scss */
   .tile {
     margin: 7px;
     min-width: calc(100%/4); }
-  /* line 112, src/styles/pages/page-one.component.scss */
+  /* line 106, src/styles/pages/page-one.component.scss */
   .tile_wrapper {
     flex-wrap: wrap; }
-    /* line 115, src/styles/pages/page-one.component.scss */
+    /* line 109, src/styles/pages/page-one.component.scss */
     .tile_wrapper:after {
       content: '';
       flex: auto;
       margin: 7px; } }
 
 @media only screen and (max-width: 768px) {
-  /* line 125, src/styles/pages/page-one.component.scss */
+  /* line 119, src/styles/pages/page-one.component.scss */
   .header {
     display: flex;
     flex-direction: column; }
-  /* line 130, src/styles/pages/page-one.component.scss */
+  /* line 124, src/styles/pages/page-one.component.scss */
   .header__stars {
     padding-left: 0;
     padding-top: 15px; }
-  /* line 135, src/styles/pages/page-one.component.scss */
+  /* line 129, src/styles/pages/page-one.component.scss */
   .tile {
     min-width: 33.33%; } }
 
-@media only screen and (max-width: 360px) {
-  /* line 144, src/styles/pages/page-one.component.scss */
-  .tile {
-    display: inline-block; }
-  /* line 148, src/styles/pages/page-one.component.scss */
+@media only screen and (max-width: 560px) {
+  /* line 138, src/styles/pages/page-one.component.scss */
   .tile_wrapper {
-    display: block; } }
+    display: block; }
+  /*
+  .tile__header {
+    border-bottom: 1px solid $blue-4;
+    margin: 0;
+    width: 100%;
+
+    &:after {
+      content: none;
+    }
+  }
+  */ }
 
 /* line 36, src/styles/core/fonts.scss */
 .panel-header__action {

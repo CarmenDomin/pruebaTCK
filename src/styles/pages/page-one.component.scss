@@ -3,8 +3,7 @@
 @import '../core/utils';
 @import '../core/viewports';
 
-$tile-margin: 7px;
-$tile-padding: 17px;
+$margin: 7px;
 
 // desktop
 .page {
@@ -32,12 +31,7 @@ $tile-padding: 17px;
 
 .tile {
   flex: 1;
-  margin: 0 $tile-margin;
-}
-
-.tile__content {
-  flex-grow: 1;
-  max-width: 225px;
+  margin: 0 $margin;
 }
 
 .tile__header {
@@ -73,13 +67,13 @@ $tile-padding: 17px;
 
   li {
     text-indent: -.7em;
-  }
 
-  li::before {
-    content: '. ';
-    color: $grey-3;
-    font-size: 25px;
-    font-weight: bold;
+    &::before {
+      content: '. ';
+      color: $grey-3;
+      font-size: 25px;
+      font-weight: bold;
+    }
   }
 }
 
@@ -105,7 +99,7 @@ $tile-padding: 17px;
 // small-desktop
 @include viewport-down(small-desktop) {
   .tile {
-    margin: $tile-margin;
+    margin: $margin;
     min-width: calc(100%/4);
   }
 
@@ -115,7 +109,7 @@ $tile-padding: 17px;
     &:after {
       content: '';
       flex: auto;
-      margin: $tile-margin; //+ $tile-padding;
+      margin: $margin;
     }
   }
 }
@@ -141,11 +135,20 @@ $tile-padding: 17px;
 
 // mobile
 @include viewport-down(mobile) {
-  .tile {
-    display: inline-block;
-  }
-
   .tile_wrapper {
     display: block;
   }
+
+  // TODO: idea, check
+  /*
+  .tile__header {
+    border-bottom: 1px solid $blue-4;
+    margin: 0;
+    width: 100%;
+
+    &:after {
+      content: none;
+    }
+  }
+  */
 }
