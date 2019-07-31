@@ -150,7 +150,100 @@
   .tile_wrapper {
     display: block; } }
 
-/* line 7, src/styles/application.scss */
+/* line 3, src/styles/core/utils.scss */
+.card-collapsible__list:before, .card-collapsible__list:after {
+  content: ' ';
+  display: table; }
+
+/* line 8, src/styles/core/utils.scss */
+.card-collapsible__list:after {
+  clear: both; }
+
+/* line 8, src/styles/pages/page-two.component.scss */
+.panel {
+  background-color: #fff;
+  border: 1px solid #dee1e8;
+  margin-top: 41px;
+  padding: 20px; }
+  /* line 14, src/styles/pages/page-two.component.scss */
+  .panel:not(:last-child) {
+    margin-bottom: -17px; }
+
+/* line 19, src/styles/pages/page-two.component.scss */
+.panel__header {
+  position: relative;
+  height: 58px; }
+
+/* line 24, src/styles/pages/page-two.component.scss */
+.panel-header__action {
+  color: #4ba7ee; }
+
+/* line 28, src/styles/pages/page-two.component.scss */
+.panel-header__badge {
+  background-color: #e82e34;
+  color: #fff;
+  height: 25px;
+  position: absolute;
+  right: -20px;
+  text-align: center;
+  top: -20px;
+  width: 221px; }
+
+/* line 39, src/styles/pages/page-two.component.scss */
+.card {
+  border: 1px solid #dee1e8;
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  padding-right: 10%; }
+
+/* line 47, src/styles/pages/page-two.component.scss */
+.card__static {
+  display: flex; }
+
+/* line 51, src/styles/pages/page-two.component.scss */
+.card-static__content {
+  color: #616469;
+  display: flex;
+  flex-direction: column;
+  margin: 18px 0 18px 27px; }
+  /* line 57, src/styles/pages/page-two.component.scss */
+  .card-static__content > * {
+    flex: 1; }
+  /* line 61, src/styles/pages/page-two.component.scss */
+  .card-static__content h2 {
+    color: #003970;
+    margin: 0;
+    flex: 0; }
+
+/* line 68, src/styles/pages/page-two.component.scss */
+.card-static-content__action {
+  color: #4ba7ee;
+  flex: 0; }
+
+/* line 73, src/styles/pages/page-two.component.scss */
+.card__collapsible {
+  padding: 23px 0 17px 81px; }
+
+/* line 80, src/styles/pages/page-two.component.scss */
+.card-collapsible__list li {
+  float: left;
+  width: 33.33%; }
+
+/* line 86, src/styles/pages/page-two.component.scss */
+.card-collapsible__disclaimer {
+  color: #003970; }
+
+@media only screen and (max-width: 768px) {
+  /* line 92, src/styles/pages/page-two.component.scss */
+  .card__static {
+    display: block; }
+    /* line 95, src/styles/pages/page-two.component.scss */
+    .card__static img {
+      width: 100%;
+      height: auto; } }
+
+/* line 8, src/styles/application.scss */
 body {
   background-color: #fafafa;
   margin: 0 40px; }

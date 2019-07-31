@@ -1,0 +1,100 @@
+@import '../core/colors.scss';
+@import '../core/utils.scss';
+@import '../core/viewports.scss';
+
+$panel-padding: 20px;
+
+// desktop
+.panel {
+  background-color: $white;
+  border: 1px solid $grey-4;
+  margin-top: 41px;
+  padding: $panel-padding;
+
+  &:not(:last-child) {
+    margin-bottom: -17px;
+  }
+}
+
+.panel__header {
+  position: relative;
+  height: 58px;
+}
+
+.panel-header__action {
+  color: $blue-1;
+}
+
+.panel-header__badge {
+  background-color: $red;
+  color: $white;
+  height: 25px;
+  position: absolute;
+  right: -$panel-padding;
+  text-align: center;
+  top: -$panel-padding;
+  width: 221px;
+}
+
+.card {
+  border: 1px solid $grey-4;
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  padding-right: 10%;
+}
+
+.card__static {
+  display: flex;
+}
+
+.card-static__content {
+  color: $grey-5;
+  display: flex;
+  flex-direction: column;
+  margin: 18px 0 18px 27px;
+
+  > * {
+    flex: 1;
+  }
+
+  h2 {
+    color: $blue-2;
+    margin: 0;
+    flex: 0;
+  }
+}
+
+.card-static-content__action {
+  color: $blue-1;
+  flex: 0;
+}
+
+.card__collapsible {
+  padding: 23px 0 17px 81px;
+}
+
+.card-collapsible__list {
+  @extend %clearfix;
+
+  li {
+    float:left;
+    width: 33.33%;
+  }
+}
+
+.card-collapsible__disclaimer {
+  color: $blue-2;
+}
+
+// mobile
+@include viewport-down('tablet') {
+  .card__static {
+    display: block;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
