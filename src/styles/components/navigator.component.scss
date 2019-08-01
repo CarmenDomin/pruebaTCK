@@ -1,11 +1,13 @@
 @import '../core/colors';
 @import '../core/fonts';
+@import '../core/utils';
 @import '../core/viewports';
 
 // desktop
 .navigation {
   align-items: center;
   background-color: $white;
+  box-shadow: 0 1px 2px $blue-shadow;
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
@@ -13,19 +15,45 @@
 
 .navigation__tab {
   @extend %font-medium-slab;
+  @include transition(('border-color', 'color'));
 
   align-items: center;
   color: $blue-1;
-  border-bottom: 1px solid transparent;
+  cursor: pointer;
   display: flex;
   height: 45px;
   justify-content: center;
+  outline: none;
+  position: relative;
   text-decoration: none;
   width: 120px;
 
+  &:after {
+    @include transition(('width'));
+
+    background-color: $blue-2;
+    bottom: 0;
+    content: '';
+    height: 1.7px;
+    position: absolute;
+    right: 0;
+    width: 0;
+  }
+
+  &:last-child:after {
+    left: 0;
+  }
+
   &.active {
     color: $blue-2;
-    border-bottom-color: $blue-2;
+
+    &:after {
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    color: $blue-2;
   }
 }
 
