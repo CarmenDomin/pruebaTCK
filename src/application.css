@@ -776,43 +776,44 @@ radio-button {
     background-color: rgba(255, 255, 255, 0.8);
     bottom: 0;
     padding: 18px 27px;
-    position: absolute; }
-  /* line 172, src/styles/pages/page-two.component.scss */
+    position: absolute;
+    width: 100%; }
+  /* line 173, src/styles/pages/page-two.component.scss */
   .card__collapsible {
     padding: 0 27px 18px; } }
 
 @media only screen and (max-width: 599px) {
-  /* line 179, src/styles/pages/page-two.component.scss */
+  /* line 180, src/styles/pages/page-two.component.scss */
   .panel {
     margin-left: 21px;
     margin-right: 21px;
     padding-top: 40px; }
-  /* line 185, src/styles/pages/page-two.component.scss */
+  /* line 186, src/styles/pages/page-two.component.scss */
   .panel__badge {
     width: 100%; }
-  /* line 189, src/styles/pages/page-two.component.scss */
+  /* line 190, src/styles/pages/page-two.component.scss */
   .panel__action {
     display: flex;
     font-size: 18px;
     line-height: 24px; }
-  /* line 195, src/styles/pages/page-two.component.scss */
+  /* line 196, src/styles/pages/page-two.component.scss */
   .panel__disclaimer {
     display: block;
     padding-left: 0;
     padding-top: 5px;
     text-align: right;
     width: 100%; }
-  /* line 203, src/styles/pages/page-two.component.scss */
+  /* line 204, src/styles/pages/page-two.component.scss */
   .card__static {
     padding: 0; }
-  /* line 207, src/styles/pages/page-two.component.scss */
+  /* line 208, src/styles/pages/page-two.component.scss */
   .card-static__content {
     padding: 18px;
     position: relative; }
-  /* line 212, src/styles/pages/page-two.component.scss */
+  /* line 213, src/styles/pages/page-two.component.scss */
   .card__collapsible {
     padding: 0 18px 18px; }
-  /* line 216, src/styles/pages/page-two.component.scss */
+  /* line 217, src/styles/pages/page-two.component.scss */
   .card-collapsible__list li {
     width: 100%; } }
 

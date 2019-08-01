@@ -1,6 +1,6 @@
 <div *ngFor='let panel of panels; let iP = index' class='panel'>
   <div class='panel__action' (click)='toggle(iP)'>
-    <img class='collapsible__arrow' [class.collapsed]='panel.collapsed' src='../../../assets/img/angle-down-blue.svg' alt='arrow' width='20'>
+    <img class='collapsible__arrow' [class.collapsed]='panel.collapsed' src='../../../assets/img/angle-down-blue.svg' alt='arrow' height='20' width='20'>
     {{panel.title}}
   </div>
   <span class='panel__disclaimer'>Opcional</span>
@@ -16,7 +16,7 @@
             <div class='card-static-content__text'>{{card.content}}</div>
             <div class='card-static-content__action' (click)='toggle(iP, iC)'>
               Más información y condiciones
-              <img class='collapsible__arrow' [class.collapsed]='card.collapsed' src='../../../assets/img/angle-down-blue.svg' alt='arrow' width='15'>
+              <img class='collapsible__arrow' [class.collapsed]='card.collapsed' src='../../../assets/img/angle-down-blue.svg' alt='arrow' height='15' width='15'>
             </div>
           </div>
         </div>
