@@ -450,7 +450,7 @@ radio-button {
 
 /* line 32, src/styles/pages/page-one.component.scss */
 .tile {
-  flex: 1 1 auto;
+  flex: 1 1 0%;
   margin: 0 7px; }
 
 @-moz-document url-prefix() {
