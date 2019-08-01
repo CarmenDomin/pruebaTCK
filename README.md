@@ -1,11 +1,11 @@
 # PruebaTCK
 
-[[ This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2. ]]
+-- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2. --
 
 ## Instalación
 
 1. Instalar dependencias: `npm install`
-2. Dev: `ng serve` or `npm start`
+2. Dev: `ng serve` o `npm start`
 3. Build: `ng build`
 
 ## Notas
