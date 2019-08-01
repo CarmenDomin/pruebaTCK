@@ -32,7 +32,7 @@ import {AppComponent} from './app.component';
       },
       {
         path: '**',
-        component: PageOneComponent,
+        redirectTo: 'page-one',
       }
     ])
   ],
