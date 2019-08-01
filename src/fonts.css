@@ -1,5 +1,4 @@
 /*
- * TODO: check
  * Fonts are resolved at build time, relative to the root source folder of the application that's being built.
  * To install the sources in a css file allow us to use relative paths.
  */
