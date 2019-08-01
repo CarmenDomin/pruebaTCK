@@ -71,6 +71,14 @@
   }
 
   .navigation__tab {
-    flex: 1;
+    flex: 1 0 0;
+  }
+}
+
+@-moz-document url-prefix() {
+  @include viewport-down(mobile) {
+    .navigation__tab {
+      flex: 1;
+    }
   }
 }

@@ -80,9 +80,15 @@ $height-img: 180px;
 }
 
 .card-static-content__text {
-  flex: 1;
+  flex: 1 0 0;
   margin-bottom: 23px;
   white-space: pre-wrap;
+}
+
+@-moz-document url-prefix() {
+  .card-static-content__text {
+    flex: 1;
+  }
 }
 
 .card-static-content__action {
