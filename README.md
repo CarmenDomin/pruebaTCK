@@ -5,8 +5,8 @@
 ## Instalación
 
 1. Instalar dependencias: `npm install`
-2. Dev: `ng serve` o `npm start`
-3. Build: `ng build`
+2. Dev: `ng serve` o `npm start`, y navegar a `http://localhost:4200`
+3. Build css (no es necesario) `npm run build-sass`
 
 ## Notas
 
