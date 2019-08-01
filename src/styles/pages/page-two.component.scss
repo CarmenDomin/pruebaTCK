@@ -45,10 +45,12 @@ $height-img: 180px;
   @extend %font-small;
 
   border: 1px solid $grey-4;
+  box-sizing: border-box;
   color: $grey-5;
   display: inline-block;
   margin-top: 22px;
   padding-right: 10%;
+  width: 100%;
 }
 
 .card-static__content {
@@ -100,6 +102,12 @@ $height-img: 180px;
 
 .card-collapsible__disclaimer {
   color: $blue-2;
+}
+
+.collapsible {
+  @include transition(('height'));
+
+  overflow: hidden;
 }
 
 // small-desktop

@@ -1,23 +1,29 @@
 <div *ngFor='let panel of panels; let iP = index' class='panel'>
-  <span class='panel__action'>{{panel.title}}</span>
+  <span class='panel__action' (click)='toggle(iP)'>{{panel.title}}</span>
   <span>Opcional</span>
   <div class='panel__badge'>EXCLUSIVO HOTELES.COM</div>
 
-  <div *ngFor='let card of panel.cards; let iC = index' class='card'>
-    <div class='card__static'>
-      <img class='card-static__img' src='../../../assets/img/{{card.imageName}}.png' alt='img_{{iP}}{{iC}}'>
-      <div class='card-static__content'>
-        <div class='card-static-content__title'>{{card.title}}</div>
-        <div class='card-static-content__text'>{{card.content}}</div>
-        <div class='card-static-content__action'>Más información y condiciones</div>
+  <div id='panel__collapsible--{{iP}}' class='collapsible'>
+    <div id='panel-collapsible__wrapper--{{iP}}'>
+      <div *ngFor='let card of panel.cards; let iC = index' class='card'>
+        <div class='card__static'>
+          <img class='card-static__img' src='../../../assets/img/{{card.imageName}}.png' alt='img_{{iP}}{{iC}}'>
+          <div class='card-static__content'>
+            <div class='card-static-content__title'>{{card.title}}</div>
+            <div class='card-static-content__text'>{{card.content}}</div>
+            <div class='card-static-content__action' (click)='toggle(iP, iC)'>Más información y condiciones</div>
+          </div>
+        </div>
+        <div id='card__collapsible--{{iP}}-{{iC}}' class='collapsible'>
+          <div *ngIf='card.moreInformation' id='card-collapsible__wrapper--{{iP}}-{{iC}}' class='card__collapsible'>
+            <div>{{card.moreInformation.text}}</div>
+            <ul class='card-collapsible__list'>
+              <li *ngFor='let item of card.moreInformation.list'>{{item}}</li>
+            </ul>
+            <div class='card-collapsible__disclaimer'>{{card.moreInformation.disclaimer}}</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div *ngIf='card.moreInformation' class='card__collapsible'>
-      <div>{{card.moreInformation.text}}</div>
-      <ul class='card-collapsible__list'>
-        <li *ngFor='let item of card.moreInformation.list'>{{item}}</li>
-      </ul>
-      <div class='card-collapsible__disclaimer'>{{card.moreInformation.disclaimer}}</div>
     </div>
   </div>
 </div>

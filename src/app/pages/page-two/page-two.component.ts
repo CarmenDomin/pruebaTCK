@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, Inject} from '@angular/core';
+import {DOCUMENT} from '@angular/common'; 
 
 @Component({
   selector: 'page-two',
@@ -37,5 +38,38 @@ export class PageTwoComponent {
       title: 'Servicios de habitación',
       cards: []
     }
-  ]
+  ];
+
+  constructor(@Inject(DOCUMENT) private readonly document) {
+  }
+
+  private updateHeights(element, wrapper, parentElement?) {
+    if (!wrapper) {
+      return;
+    }
+    if (element.clientHeight) {
+      if (parentElement) {
+        parentElement.style.height = parentElement.clientHeight - wrapper.clientHeight + 'px';
+      }
+      element.style.height = 0;
+    } else {
+      if (parentElement) {
+        parentElement.style.height = parentElement.clientHeight + wrapper.clientHeight + 'px';
+      }
+      element.style.height = wrapper.clientHeight + 'px';
+    }
+  }
+
+  public toggle(iP, iC?) {
+    iC !== undefined ?
+      this.updateHeights(
+        this.document.getElementById('card__collapsible--' + iP + '-' + iC),
+        this.document.getElementById('card-collapsible__wrapper--' + iP + '-' + iC),
+        this.document.getElementById('panel__collapsible--' + iP)
+      ) :
+      this.updateHeights(
+        this.document.getElementById('panel__collapsible--' + iP),
+        this.document.getElementById('panel-collapsible__wrapper--' + iP)
+      );
+  }
 }
