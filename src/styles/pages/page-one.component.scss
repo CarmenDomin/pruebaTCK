@@ -66,13 +66,15 @@ $margin: 7px;
   margin-bottom: 42px;
 
   li {
-    text-indent: -.7em;
+    margin-left: 6px;
 
     &::before {
-      content: '. ';
+      content: '\2022';
       color: $grey-3;
-      font-size: 25px;
       font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em
     }
   }
 }
@@ -138,17 +140,4 @@ $margin: 7px;
   .tile_wrapper {
     display: block;
   }
-
-  // TODO: idea, check
-  /*
-  .tile__header {
-    border-bottom: 1px solid $blue-4;
-    margin: 0;
-    width: 100%;
-
-    &:after {
-      content: none;
-    }
-  }
-  */
 }

@@ -1,9 +1,9 @@
 <div *ngFor='let panel of panels; let iP = index' class='panel'>
-  <span class='panel__action' (click)='toggle(iP)'>
+  <div class='panel__action' (click)='toggle(iP)'>
     <img class='collapsible__arrow' [class.collapsed]='panel.collapsed' src='../../../assets/img/angle-down-blue.svg' alt='arrow' width='20'>
     {{panel.title}}
-    <span class='panel-action__disclaimer'>Opcional</span>
-  </span>
+  </div>
+  <span class='panel__disclaimer'>Opcional</span>
   <div class='panel__badge'>EXCLUSIVO HOTELES.COM</div>
 
   <div id='panel__collapsible--{{iP}}' class='collapsible'>
@@ -23,7 +23,7 @@
         <div id='card__collapsible--{{iP}}-{{iC}}' class='collapsible'>
           <div *ngIf='card.moreInformation' id='card-collapsible__wrapper--{{iP}}-{{iC}}' class='card__collapsible'>
             <div>{{card.moreInformation.text}}</div>
-            <ul class='card-collapsible__list'>
+            <ul *ngIf='card.moreInformation.list' class='card-collapsible__list'>
               <li *ngFor='let item of card.moreInformation.list'>{{item}}</li>
             </ul>
             <div class='card-collapsible__disclaimer'>{{card.moreInformation.disclaimer}}</div>

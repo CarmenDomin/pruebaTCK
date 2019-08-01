@@ -15,6 +15,9 @@ export class PageTwoComponent {
           imageName: 'img1',
           title: 'Olvídese de la rutina',
           content: 'Cras vehicula vestibulum dapibus. Pellentesque auctor dolor et purus facilisis maximus. Mauris eget urna luctus, imperdiet neque nec, aliquet lorem.',
+          moreInformation: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+          }
         },
         {
           imageName: 'img2',
@@ -38,7 +41,16 @@ export class PageTwoComponent {
     },
     {
       title: 'Servicios de habitación',
-      cards: []
+      cards: [
+        {
+          imageName: 'img1',
+          title: 'Título',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          moreInformation: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+          }
+        }
+      ]
     }
   ];
 
@@ -53,7 +65,7 @@ export class PageTwoComponent {
       if (parentElement) {
         parentElement.style.height = parentElement.clientHeight - wrapper.clientHeight + 'px';
       }
-      element.style.height = 0;
+      element.style.height = '0';
     } else {
       if (parentElement) {
         parentElement.style.height = parentElement.clientHeight + wrapper.clientHeight + 'px';

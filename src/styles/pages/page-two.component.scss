@@ -22,23 +22,15 @@ $height-img: 180px;
   @extend %font-huge;
 
   color: $blue-1;
-  padding-left: 64px;
-  position: relative;
-
-  .collapsible__arrow {
-    bottom: -2px;
-    left: 5px;
-    position: absolute;
-  }
+  display: inline-block;
+  margin-left: -10px;
 }
 
-.panel-action__disclaimer {
+.panel__disclaimer {
   @extend %font-extra-small;
 
   color: $blue-5;
-  bottom: -2px;
-  margin-left: 31px;
-  position: absolute;
+  padding-left: 15px;
 }
 
 .panel__badge {
@@ -97,13 +89,7 @@ $height-img: 180px;
   @extend %font-small-bold;
 
   color: $blue-1;
-  position: relative;
-
-  .collapsible__arrow {
-    margin-left: 37px;
-    position: absolute;
-    bottom: -2px;
-  }
+  display: flex;
 }
 
 .card__collapsible {
@@ -112,6 +98,8 @@ $height-img: 180px;
 
 .card-collapsible__list {
   @extend %clearFix;
+
+  padding-left: 20px;
 
   li {
     box-sizing: border-box;
@@ -123,6 +111,7 @@ $height-img: 180px;
 
 .card-collapsible__disclaimer {
   color: $blue-2;
+  font-weight: $font-weight-bold;
 }
 
 .collapsible {
@@ -134,8 +123,11 @@ $height-img: 180px;
 .collapsible__arrow {
   @include transition(('transform'));
 
+  padding: 0 15px;
+  transform: rotate(180deg);
+
   &.collapsed {
-    transform: rotate(180deg);
+    transform: rotate(0);
   }
 }
 
@@ -183,6 +175,20 @@ $height-img: 180px;
   }
   
   .panel__badge {
+    width: 100%;
+  }
+
+  .panel__action {
+    display: flex;
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+  }
+
+  .panel__disclaimer{
+    display: block;
+    padding-left: 0;
+    padding-top: 5px;
+    text-align: right;
     width: 100%;
   }
   
