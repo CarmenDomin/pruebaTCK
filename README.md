@@ -1,19 +1,27 @@
 # PruebaTCK
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+[[ This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2. ]]
 
-## Development server
+## Instalación
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Instalar dependencias: `npm install`
+2. Dev: `ng serve` or `npm start`
+3. Build: `ng build`
 
-## Code scaffolding
+## Notas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+El proyecto está dividido en distintos componentes: las dos páginas en 'pages' y una carpeta 'components' con componentes que tienen potencial de ser reutilizables o lógica individual.
 
-## Build
+Los estilos se encuentran en la carpeta 'styles', se ha usado 'node-sass' para compilar dicha carpeta y generar el archivo 'application.css'.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+En este archivo se encuentran todos los estilos menos las fuentes, que debido a problemas con las rutas relativas se han ubicado en 'fonts.css'.
 
-## Further help
+No se ha hecho uso de la encapsulación de estilos de Angular para adaptarse a la estructura de la prueba.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Navegatores soportados
+
+- Chrome
+- Firefox
+- IE11
+
+¡ ESPERO QUE OS GUSTE !
