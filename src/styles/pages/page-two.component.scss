@@ -3,6 +3,8 @@
 @import '../core/utils';
 @import '../core/viewports';
 
+$height-img: 180px;
+
 // desktop
 .panel {
   @extend %font-extra-small;
@@ -44,41 +46,41 @@
 
   border: 1px solid $grey-4;
   color: $grey-5;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   margin-top: 22px;
   padding-right: 10%;
 }
 
-.card__static {
-  display: flex;
-}
-
 .card-static__content {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  min-height: $height-img;
   padding: 18px 0 18px 27px;
+}
 
-  > * {
-    flex: 1;
-    margin-bottom: 23px;
-  }
+.card-static__img {
+  float: left;
+  height: $height-img;
+  width: 270px;
+}
 
-  h2 {
-    @extend %font-large;
+.card-static-content__title {
+  @extend %font-large;
 
-    color: $blue-2;
-    margin: 0;
-    flex: 0;
-  }
+  color: $blue-2;
+}
+
+.card-static-content__text {
+  flex: 1;
+  margin-bottom: 23px;
+  white-space: pre-wrap;
 }
 
 .card-static-content__action {
   @extend %font-small-bold;
 
   color: $blue-1;
-  flex: 0;
-  margin: 0;
 }
 
 .card__collapsible {
@@ -113,15 +115,16 @@
     padding-right: 0;
   }
 
+  .card-static__img {
+    float: none;
+    height: auto;
+    width: 100%;
+  }
+
   .card__static {
     display: block;
     position: relative;
     padding-bottom: 45px;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
   }
 
   .card-static__content {
@@ -145,11 +148,7 @@
   .panel__badge {
     width: 100%;
   }
-
-  .card {
-    padding-right: 0;
-  }
-
+  
   .card__static {
     padding: 0;
   }
@@ -161,9 +160,9 @@
 
   .card__collapsible {
     padding: 0 18px 18px;
-    
-    li {
-      width: 100%;
-    }
+  }
+
+  .card-collapsible__list li {
+    width: 100%;
   }
 }

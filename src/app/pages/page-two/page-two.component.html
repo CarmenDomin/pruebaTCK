@@ -1,14 +1,14 @@
-<div *ngFor='let panel of panels' class='panel'>
+<div *ngFor='let panel of panels; let iP = index' class='panel'>
   <span class='panel__action'>{{panel.title}}</span>
   <span>Opcional</span>
   <div class='panel__badge'>EXCLUSIVO HOTELES.COM</div>
 
-  <div *ngFor='let card of panel.cards' class='card'>
+  <div *ngFor='let card of panel.cards; let iC = index' class='card'>
     <div class='card__static'>
-      <img src='../../../assets/img/{{card.imageName}}.png' alt='card-1.2' height='180'>
+      <img class='card-static__img' src='../../../assets/img/{{card.imageName}}.png' alt='img_{{iP}}{{iC}}'>
       <div class='card-static__content'>
-        <h2>{{card.title}}</h2>
-        <span>{{card.content}}</span>
+        <div class='card-static-content__title'>{{card.title}}</div>
+        <div class='card-static-content__text'>{{card.content}}</div>
         <div class='card-static-content__action'>Más información y condiciones</div>
       </div>
     </div>

@@ -20,7 +20,7 @@
   line-height: 30px; }
 
 /* line 60, src/styles/core/fonts.scss */
-.card-static__content h2 {
+.card-static-content__title {
   font-family: "Roboto Slab";
   font-size: 18px;
   font-weight: 700;
@@ -141,7 +141,7 @@
   line-height: 30px; }
 
 /* line 60, src/styles/core/fonts.scss */
-.card-static__content h2 {
+.card-static-content__title {
   font-family: "Roboto Slab";
   font-size: 18px;
   font-weight: 700;
@@ -309,7 +309,7 @@ radio-button {
   line-height: 30px; }
 
 /* line 60, src/styles/core/fonts.scss */
-.card-static__content h2 {
+.card-static-content__title {
   font-family: "Roboto Slab";
   font-size: 18px;
   font-weight: 700;
@@ -520,7 +520,7 @@ radio-button {
   line-height: 30px; }
 
 /* line 60, src/styles/core/fonts.scss */
-.card-static__content h2 {
+.card-static-content__title {
   font-family: "Roboto Slab";
   font-size: 18px;
   font-weight: 700;
@@ -592,7 +592,7 @@ radio-button {
 .card-collapsible__list:after {
   clear: both; }
 
-/* line 7, src/styles/pages/page-two.component.scss */
+/* line 9, src/styles/pages/page-two.component.scss */
 .panel {
   background-color: #fff;
   border: 1px solid #dee1e8;
@@ -600,15 +600,15 @@ radio-button {
   margin-top: 41px;
   padding: 20px;
   position: relative; }
-  /* line 17, src/styles/pages/page-two.component.scss */
+  /* line 19, src/styles/pages/page-two.component.scss */
   .panel:not(:last-child) {
     margin-bottom: -17px; }
 
-/* line 22, src/styles/pages/page-two.component.scss */
+/* line 24, src/styles/pages/page-two.component.scss */
 .panel__action {
   color: #4ba7ee; }
 
-/* line 28, src/styles/pages/page-two.component.scss */
+/* line 30, src/styles/pages/page-two.component.scss */
 .panel__badge {
   background-color: #e82e34;
   color: #fff;
@@ -620,106 +620,106 @@ radio-button {
   top: 0;
   width: 221px; }
 
-/* line 42, src/styles/pages/page-two.component.scss */
+/* line 44, src/styles/pages/page-two.component.scss */
 .card {
   border: 1px solid #dee1e8;
   color: #616469;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   margin-top: 22px;
   padding-right: 10%; }
 
-/* line 53, src/styles/pages/page-two.component.scss */
-.card__static {
-  display: flex; }
-
-/* line 57, src/styles/pages/page-two.component.scss */
+/* line 54, src/styles/pages/page-two.component.scss */
 .card-static__content {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  min-height: 180px;
   padding: 18px 0 18px 27px; }
-  /* line 62, src/styles/pages/page-two.component.scss */
-  .card-static__content > * {
-    flex: 1;
-    margin-bottom: 23px; }
-  /* line 67, src/styles/pages/page-two.component.scss */
-  .card-static__content h2 {
-    color: #003970;
-    margin: 0;
-    flex: 0; }
 
-/* line 76, src/styles/pages/page-two.component.scss */
+/* line 62, src/styles/pages/page-two.component.scss */
+.card-static__img {
+  float: left;
+  height: 180px;
+  width: 270px; }
+
+/* line 68, src/styles/pages/page-two.component.scss */
+.card-static-content__title {
+  color: #003970; }
+
+/* line 74, src/styles/pages/page-two.component.scss */
+.card-static-content__text {
+  flex: 1;
+  margin-bottom: 23px;
+  white-space: pre-wrap; }
+
+/* line 80, src/styles/pages/page-two.component.scss */
 .card-static-content__action {
-  color: #4ba7ee;
-  flex: 0;
-  margin: 0; }
+  color: #4ba7ee; }
 
-/* line 84, src/styles/pages/page-two.component.scss */
+/* line 86, src/styles/pages/page-two.component.scss */
 .card__collapsible {
   padding: 23px 0 17px 81px; }
 
-/* line 91, src/styles/pages/page-two.component.scss */
+/* line 93, src/styles/pages/page-two.component.scss */
 .card-collapsible__list li {
   box-sizing: border-box;
   float: left;
   padding-right: 23px;
   width: 33.33%; }
 
-/* line 99, src/styles/pages/page-two.component.scss */
+/* line 101, src/styles/pages/page-two.component.scss */
 .card-collapsible__disclaimer {
   color: #003970; }
 
 @media only screen and (max-width: 1023px) {
-  /* line 105, src/styles/pages/page-two.component.scss */
+  /* line 107, src/styles/pages/page-two.component.scss */
   .card-collapsible__list li {
     width: 50%; } }
 
 @media only screen and (max-width: 768px) {
-  /* line 112, src/styles/pages/page-two.component.scss */
+  /* line 114, src/styles/pages/page-two.component.scss */
   .card {
     padding-right: 0; }
-  /* line 116, src/styles/pages/page-two.component.scss */
+  /* line 118, src/styles/pages/page-two.component.scss */
+  .card-static__img {
+    float: none;
+    height: auto;
+    width: 100%; }
+  /* line 124, src/styles/pages/page-two.component.scss */
   .card__static {
     display: block;
     position: relative;
     padding-bottom: 45px; }
-    /* line 121, src/styles/pages/page-two.component.scss */
-    .card__static img {
-      width: 100%;
-      height: auto; }
-  /* line 127, src/styles/pages/page-two.component.scss */
+  /* line 130, src/styles/pages/page-two.component.scss */
   .card-static__content {
     background-color: rgba(255, 255, 255, 0.8);
     bottom: 0;
     padding: 18px 27px;
     position: absolute; }
-  /* line 134, src/styles/pages/page-two.component.scss */
+  /* line 137, src/styles/pages/page-two.component.scss */
   .card__collapsible {
     padding: 0 27px 18px; } }
 
 @media only screen and (max-width: 560px) {
-  /* line 141, src/styles/pages/page-two.component.scss */
+  /* line 144, src/styles/pages/page-two.component.scss */
   .panel {
     padding-top: 40px; }
-  /* line 145, src/styles/pages/page-two.component.scss */
+  /* line 148, src/styles/pages/page-two.component.scss */
   .panel__badge {
     width: 100%; }
-  /* line 149, src/styles/pages/page-two.component.scss */
-  .card {
-    padding-right: 0; }
-  /* line 153, src/styles/pages/page-two.component.scss */
+  /* line 152, src/styles/pages/page-two.component.scss */
   .card__static {
     padding: 0; }
-  /* line 157, src/styles/pages/page-two.component.scss */
+  /* line 156, src/styles/pages/page-two.component.scss */
   .card-static__content {
     padding: 18px;
     position: relative; }
-  /* line 162, src/styles/pages/page-two.component.scss */
+  /* line 161, src/styles/pages/page-two.component.scss */
   .card__collapsible {
     padding: 0 18px 18px; }
-    /* line 165, src/styles/pages/page-two.component.scss */
-    .card__collapsible li {
-      width: 100%; } }
+  /* line 165, src/styles/pages/page-two.component.scss */
+  .card-collapsible__list li {
+    width: 100%; } }
 
 /* line 7, src/styles/application.scss */
 body {
