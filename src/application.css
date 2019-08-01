@@ -148,7 +148,7 @@
     display: flex; }
   /* line 73, src/styles/components/navigator.component.scss */
   .navigation__tab {
-    flex: 1 0 0; } }
+    flex: 1 1 auto; } }
 
 @-moz-document url-prefix() {
   @media only screen and (max-width: 599px) {
@@ -273,7 +273,7 @@ radio-button {
 
 /* line 29, src/styles/components/radio-buttons.component.scss */
 .radio-button__content {
-  flex: 1 0 0; }
+  flex: 1 1 auto; }
 
 @-moz-document url-prefix() {
   /* line 34, src/styles/components/radio-buttons.component.scss */
@@ -450,7 +450,7 @@ radio-button {
 
 /* line 32, src/styles/pages/page-one.component.scss */
 .tile {
-  flex: 1 0 0;
+  flex: 1 1 auto;
   margin: 0 7px; }
 
 @-moz-document url-prefix() {
@@ -705,7 +705,7 @@ radio-button {
 
 /* line 82, src/styles/pages/page-two.component.scss */
 .card-static-content__text {
-  flex: 1 0 0;
+  flex: 1 1 auto;
   margin-bottom: 23px;
   white-space: pre-wrap; }
 
