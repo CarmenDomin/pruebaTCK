@@ -83,39 +83,70 @@
   letter-spacing: 1.52px;
   line-height: 14px; }
 
-/* line 6, src/styles/components/navigator.component.scss */
+/* line 3, src/styles/core/utils.scss */
+.card-collapsible__list:before, .card-collapsible__list:after {
+  content: ' ';
+  display: table; }
+
+/* line 8, src/styles/core/utils.scss */
+.card-collapsible__list:after {
+  clear: both; }
+
+/* line 7, src/styles/components/navigator.component.scss */
 .navigation {
   align-items: center;
   background-color: #fff;
+  box-shadow: 0 1px 2px rgba(80, 92, 119, 0.2);
   display: flex;
   justify-content: flex-end;
   padding-right: 30px; }
 
-/* line 14, src/styles/components/navigator.component.scss */
+/* line 16, src/styles/components/navigator.component.scss */
 .navigation__tab {
+  transition: border-color .3s ease-out, color .3s ease-out;
   align-items: center;
   color: #4ba7ee;
-  border-bottom: 1px solid transparent;
+  cursor: pointer;
   display: flex;
   height: 45px;
   justify-content: center;
+  outline: none;
+  position: relative;
   text-decoration: none;
   width: 120px; }
-  /* line 26, src/styles/components/navigator.component.scss */
+  /* line 31, src/styles/components/navigator.component.scss */
+  .navigation__tab:after {
+    transition: width .3s ease-out;
+    background-color: #003970;
+    bottom: 0;
+    content: '';
+    height: 1.7px;
+    position: absolute;
+    right: 0;
+    width: 0; }
+  /* line 43, src/styles/components/navigator.component.scss */
+  .navigation__tab:last-child:after {
+    left: 0; }
+  /* line 47, src/styles/components/navigator.component.scss */
   .navigation__tab.active {
-    color: #003970;
-    border-bottom-color: #003970; }
+    color: #003970; }
+    /* line 50, src/styles/components/navigator.component.scss */
+    .navigation__tab.active:after {
+      width: 100%; }
+  /* line 55, src/styles/components/navigator.component.scss */
+  .navigation__tab:hover {
+    color: #003970; }
 
 @media only screen and (max-width: 768px) {
-  /* line 34, src/styles/components/navigator.component.scss */
+  /* line 62, src/styles/components/navigator.component.scss */
   .navigation {
     padding-right: 0; } }
 
-@media only screen and (max-width: 560px) {
-  /* line 41, src/styles/components/navigator.component.scss */
+@media only screen and (max-width: 599px) {
+  /* line 69, src/styles/components/navigator.component.scss */
   .navigation {
     display: flex; }
-  /* line 45, src/styles/components/navigator.component.scss */
+  /* line 73, src/styles/components/navigator.component.scss */
   .navigation__tab {
     flex: 1; } }
 
@@ -220,18 +251,25 @@ radio-button {
 /* line 9, src/styles/components/radio-buttons.component.scss */
 .radio-button {
   transition: border-color .3s ease-out;
+  background: #fff;
   border: 1px solid #c9e3f9;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 17px; }
+  /* line 20, src/styles/components/radio-buttons.component.scss */
+  .radio-button:hover {
+    box-shadow: 0 2px 3px rgba(80, 92, 119, 0.2); }
+    /* line 23, src/styles/components/radio-buttons.component.scss */
+    .radio-button:hover .radio-button__inner-circle {
+      background-color: #9da2a9; }
 
-/* line 20, src/styles/components/radio-buttons.component.scss */
+/* line 29, src/styles/components/radio-buttons.component.scss */
 .radio-button__content {
   flex: 1; }
 
-/* line 24, src/styles/components/radio-buttons.component.scss */
+/* line 33, src/styles/components/radio-buttons.component.scss */
 .radio-button__selector {
   transition: border-color .3s ease-out, color .3s ease-out;
   align-items: center;
@@ -242,7 +280,7 @@ radio-button {
   height: 46px;
   padding: 0 10px; }
 
-/* line 37, src/styles/components/radio-buttons.component.scss */
+/* line 46, src/styles/components/radio-buttons.component.scss */
 .radio-button__outer-circle {
   transition: border .3s ease-out;
   align-items: center;
@@ -256,7 +294,7 @@ radio-button {
   min-width: 16px;
   position: relative; }
 
-/* line 52, src/styles/components/radio-buttons.component.scss */
+/* line 61, src/styles/components/radio-buttons.component.scss */
 .radio-button__inner-circle {
   transition: background-color .3s ease-out;
   border-radius: 50%;
@@ -267,21 +305,22 @@ radio-button {
   top: 50%;
   transform: translate(-50%, -50%); }
 
-/* line 65, src/styles/components/radio-buttons.component.scss */
-[aria-checked="true"] .radio-button {
+/* line 74, src/styles/components/radio-buttons.component.scss */
+[aria-checked='true'] .radio-button {
   border-color: #003970; }
 
-/* line 69, src/styles/components/radio-buttons.component.scss */
-[aria-checked="true"] .radio-button__selector {
+/* line 78, src/styles/components/radio-buttons.component.scss */
+[aria-checked='true'] .radio-button__selector {
   border-color: #003970;
   color: #003970; }
 
-/* line 73, src/styles/components/radio-buttons.component.scss */
-[aria-checked="true"] .radio-button__outer-circle {
-  border-color: #6dc138; }
-  /* line 76, src/styles/components/radio-buttons.component.scss */
-  [aria-checked="true"] .radio-button__outer-circle .radio-button__inner-circle {
-    background-color: #6dc138; }
+/* line 83, src/styles/components/radio-buttons.component.scss */
+[aria-checked='true'] .radio-button__outer-circle {
+  border-color: #6dc138 !important; }
+
+/* line 87, src/styles/components/radio-buttons.component.scss */
+[aria-checked='true'] .radio-button__inner-circle {
+  background-color: #6dc138 !important; }
 
 /* line 1, src/styles/components/stars.component.scss */
 .star {
@@ -457,7 +496,7 @@ radio-button {
   display: flex;
   padding: 29px 14px; }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) {
   /* line 103, src/styles/pages/page-one.component.scss */
   .tile {
     margin: 7px;
@@ -484,10 +523,13 @@ radio-button {
   .tile {
     min-width: 33.33%; } }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 599px) {
   /* line 140, src/styles/pages/page-one.component.scss */
   .tile_wrapper {
-    display: block; } }
+    display: block; }
+    /* line 143, src/styles/pages/page-one.component.scss */
+    .tile_wrapper:after {
+      content: none; } }
 
 /* line 36, src/styles/core/fonts.scss */
 .panel__action {
@@ -587,7 +629,7 @@ radio-button {
 .panel {
   background-color: #fff;
   border: 1px solid #dee1e8;
-  margin-top: 41px;
+  margin: 41px 0 26px;
   padding: 20px;
   position: relative; }
   /* line 16, src/styles/pages/page-two.component.scss */
@@ -689,7 +731,7 @@ radio-button {
   .collapsible__arrow.collapsed {
     transform: rotate(0); }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) {
   /* line 136, src/styles/pages/page-two.component.scss */
   .card-collapsible__list li {
     width: 50%; } }
@@ -718,40 +760,51 @@ radio-button {
   .card__collapsible {
     padding: 0 27px 18px; } }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 599px) {
   /* line 173, src/styles/pages/page-two.component.scss */
   .panel {
+    margin-left: 21px;
+    margin-right: 21px;
     padding-top: 40px; }
-  /* line 177, src/styles/pages/page-two.component.scss */
+  /* line 179, src/styles/pages/page-two.component.scss */
   .panel__badge {
     width: 100%; }
-  /* line 181, src/styles/pages/page-two.component.scss */
+  /* line 183, src/styles/pages/page-two.component.scss */
   .panel__action {
     display: flex;
     font-size: 18px;
     line-height: 24px; }
-  /* line 187, src/styles/pages/page-two.component.scss */
+  /* line 189, src/styles/pages/page-two.component.scss */
   .panel__disclaimer {
     display: block;
     padding-left: 0;
     padding-top: 5px;
     text-align: right;
     width: 100%; }
-  /* line 195, src/styles/pages/page-two.component.scss */
+  /* line 197, src/styles/pages/page-two.component.scss */
   .card__static {
     padding: 0; }
-  /* line 199, src/styles/pages/page-two.component.scss */
+  /* line 201, src/styles/pages/page-two.component.scss */
   .card-static__content {
     padding: 18px;
     position: relative; }
-  /* line 204, src/styles/pages/page-two.component.scss */
+  /* line 206, src/styles/pages/page-two.component.scss */
   .card__collapsible {
     padding: 0 18px 18px; }
-  /* line 208, src/styles/pages/page-two.component.scss */
+  /* line 210, src/styles/pages/page-two.component.scss */
   .card-collapsible__list li {
     width: 100%; } }
 
-/* line 7, src/styles/application.scss */
+/* line 8, src/styles/application.scss */
 body {
   background-color: #fafafa;
-  margin: 0 40px; }
+  margin: 0 40px;
+  padding: 0 10%; }
+  @media only screen and (max-width: 1200px) {
+    /* line 8, src/styles/application.scss */
+    body {
+      padding: 0; } }
+  @media only screen and (max-width: 599px) {
+    /* line 8, src/styles/application.scss */
+    body {
+      margin: 0; } }

@@ -139,5 +139,9 @@ $margin: 7px;
 @include viewport-down(mobile) {
   .tile_wrapper {
     display: block;
+
+    &:after {
+      content: none;
+    }
   }
 }

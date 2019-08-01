@@ -9,7 +9,7 @@ $height-img: 180px;
 .panel {
   background-color: $white;
   border: 1px solid $grey-4;
-  margin-top: 41px;
+  margin: 41px 0 26px;
   padding: 20px;
   position: relative;
 
@@ -171,6 +171,8 @@ $height-img: 180px;
 // mobile
 @include viewport-down(mobile) {
   .panel {
+    margin-left: 21px;
+    margin-right: 21px;
     padding-top: 40px;
   }
   
