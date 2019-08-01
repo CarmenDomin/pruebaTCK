@@ -9,6 +9,7 @@ export class PageTwoComponent {
   public panels = [
     {
       title: 'Mejora tu estancia',
+      collapsed: false,
       cards: [
         {
           imageName: 'img1',
@@ -18,6 +19,7 @@ export class PageTwoComponent {
         {
           imageName: 'img2',
           title: 'Experiencias y programas SPA con agua',
+          collapsed: true,
           content: "Las experiencias spa de agua tienen una presencia muy especial en SPA Sensations. No es extraño si consideramos que la mayor parte del planeta, así como del propio cuerpo humano, están compuestos de agua.\nEl arte de recrear experiencias de agua en variaciones ilimitadas es la base de la propuesta de SPA Sensations a sus clientes, aportando el refinamiento al baño y a la hidratación en todas sus formas. Un mundo mágico de posibilidades, más allá de la terapia y del que ahora usted, también podrá disfrutar.",
           moreInformation: {
             text: 'Incluye',
@@ -40,10 +42,10 @@ export class PageTwoComponent {
     }
   ];
 
-  constructor(@Inject(DOCUMENT) private readonly document) {
+  constructor(@Inject(DOCUMENT) private readonly document: Document) {
   }
 
-  private updateHeights(element, wrapper, parentElement?) {
+  private updateHeights(element: HTMLElement, wrapper: HTMLElement, parentElement?: HTMLElement) {
     if (!wrapper) {
       return;
     }
@@ -60,16 +62,20 @@ export class PageTwoComponent {
     }
   }
 
-  public toggle(iP, iC?) {
-    iC !== undefined ?
+  public toggle(iP: number, iC?: number) {
+    if (iC !== undefined) {
+      this.panels[iP].cards[iC].collapsed = !this.panels[iP].cards[iC].collapsed;
       this.updateHeights(
         this.document.getElementById('card__collapsible--' + iP + '-' + iC),
         this.document.getElementById('card-collapsible__wrapper--' + iP + '-' + iC),
         this.document.getElementById('panel__collapsible--' + iP)
-      ) :
+      );
+    } else {
+      this.panels[iP].collapsed = !this.panels[iP].collapsed;
       this.updateHeights(
         this.document.getElementById('panel__collapsible--' + iP),
         this.document.getElementById('panel-collapsible__wrapper--' + iP)
       );
+    }
   }
 }

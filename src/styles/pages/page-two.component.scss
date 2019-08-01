@@ -7,11 +7,8 @@ $height-img: 180px;
 
 // desktop
 .panel {
-  @extend %font-extra-small;
-
   background-color: $white;
   border: 1px solid $grey-4;
-  color: $blue-5;
   margin-top: 41px;
   padding: 20px;
   position: relative;
@@ -25,6 +22,23 @@ $height-img: 180px;
   @extend %font-huge;
 
   color: $blue-1;
+  padding-left: 64px;
+  position: relative;
+
+  .collapsible__arrow {
+    bottom: -2px;
+    left: 5px;
+    position: absolute;
+  }
+}
+
+.panel-action__disclaimer {
+  @extend %font-extra-small;
+
+  color: $blue-5;
+  bottom: -2px;
+  margin-left: 31px;
+  position: absolute;
 }
 
 .panel__badge {
@@ -83,6 +97,13 @@ $height-img: 180px;
   @extend %font-small-bold;
 
   color: $blue-1;
+  position: relative;
+
+  .collapsible__arrow {
+    margin-left: 37px;
+    position: absolute;
+    bottom: -2px;
+  }
 }
 
 .card__collapsible {
@@ -108,6 +129,14 @@ $height-img: 180px;
   @include transition(('height'));
 
   overflow: hidden;
+}
+
+.collapsible__arrow {
+  @include transition(('transform'));
+
+  &.collapsed {
+    transform: rotate(180deg);
+  }
 }
 
 // small-desktop
